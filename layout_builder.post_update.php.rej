@@ -1,0 +1,16 @@
+--- modules/layout_builder/layout_builder.post_update.php
++++ modules/layout_builder/layout_builder.post_update.php
+@@ -190,6 +190,13 @@
+   }
+ }
+ 
++/**
++ * Clear caches due to addition of service decorator for entity form controller.
++ */
++function layout_builder_post_update_override_entity_form_controller() {
++  // Empty post-update hook.
++}
++
+ /**
+  * Set the layout builder field as non-translatable where possible.
+  */
